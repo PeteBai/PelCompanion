@@ -1,0 +1,27 @@
+<!--pages/suggestion/suggestion.wxml-->
+<view class='firstSlogan'>
+  <text>针对您的身体特点，我们有一些小建议</text>
+</view>
+<text>{{ blank }}</text>
+
+<view wx:if="{{ ctrl_type=='showSignInButton' }}">
+  <button class='avgbuttoncls' open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">登录</button>
+</view>
+
+<view wx:elif="{{ ctrl_type=='showBtCnetButton' }}">
+  <button bindtap='blueCnet' class='avgbuttoncls'>连接蓝牙</button>
+</view>
+
+<!-- 这里要连接到后续的测量页面 -->
+<view wx:elif="{{ ctrl_type=='showMeasureButton' }}">
+  <button type='primary' class='avgbuttoncls'>开始测量</button>
+</view>
+
+<view wx:else="{{ ctrl_type=='showSuggestions' }}">
+  <text class='recomwrds'>{{ recommandInfo }}</text>
+</view>
+
+<text>{{ blank }}</text>
+<view class='firstSlogan'>
+    <navigator url="/pages/history/history">查看历史测量记录</navigator>
+</view>

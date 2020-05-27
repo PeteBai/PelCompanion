@@ -1,0 +1,46 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: rgb(0, 0, 0);
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.centerbuttoncls{
+  width: 256rpx;
+  height: 85rpx;
+  background-color: green;
+  color: white;
+}
+
+.avgbuttoncls{
+  width: 256rpx;
+  height: 85rpx;
+}
+
+.background{
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.background .backgroundX {
+  width: 150vw;
+  height: 100vw;
+  position:fixed; 
+  background-size:100% 100%;
+  filter: blur(50rpx);
+}

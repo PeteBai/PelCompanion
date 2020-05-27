@@ -1,0 +1,22 @@
+<!--index.wxml-->
+
+<view class="background">
+  <image class="backgroundX" src="../../images/b2.jpg"></image>
+</view>
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">欢迎，{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+
+<view>
+   <button class='centerbuttoncls' bindtap='connectBlue'>开始测量</button>
+   <text>{{ blank }}</text>
+   <button class='avgbuttoncls' bindtap='startMeasure'>记录本次数据</button>
+</view>
+

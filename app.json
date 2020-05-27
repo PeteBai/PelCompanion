@@ -1,0 +1,40 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/bluetoothcnet/bluetoothcnet",
+    "pages/suggestion/suggestion",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/measure_off.png",
+        "selectedIconPath": "images/measure_on.png",
+        "text": "测量"
+      },
+      {
+        "pagePath": "pages/suggestion/suggestion",
+        "iconPath": "images/suggest_off.png",
+        "selectedIconPath": "images/suggest_on.png",
+        "text": "建议"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "images/about_off.png",
+        "selectedIconPath": "images/about_on.png",
+        "text": "关于"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

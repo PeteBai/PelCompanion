@@ -1,0 +1,21 @@
+<!--history.wxml-->
+<page>
+  <view class='recomdwrds'>
+    <text class="firstSlogan">"{{ user_name }}"历史测量记录</text>
+    <text>{{ blank }}</text>
+    <button class='deleteBtn' bindtap="confirmDelete">删除记录</button>
+  </view>
+<text>{{ blank }}</text>
+<view wx:if="{{isReady == true}}">
+  <checkbox-group bindchange="selectDelete">
+     <view wx:for="{{ dateTime }}" wx:for-index="index" wx:for-item="item">
+     <!-- <text class='formLabel'>{{ index }}:{{ item }}</text> -->
+     <label class="chkBox">
+     <checkbox value="{{index}}" />{{ index }}: {{ item }}</label>
+     <text class='formContent'>倾斜度为：{{ queryResult[index].degree }}。</text>
+     <text class='formContent'>是否左倾/右倾：{{ queryResult[index].position }}，倾斜角度：{{ queryResult[index].sidedegree }}。</text>
+     <text>{{ blank }}</text> 
+     </view>
+  </checkbox-group>
+</view>
+</page>
